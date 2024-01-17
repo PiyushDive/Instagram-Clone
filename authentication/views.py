@@ -4,6 +4,9 @@ from . import forms
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 
+def index(request):
+    return redirect('login')
+
 @csrf_exempt
 def signup_view(request):
     if request.method == 'POST':
